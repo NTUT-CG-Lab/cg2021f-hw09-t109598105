@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+		<meta charset="utf-8">
+	<link href="./vendor.bundle.css" rel="stylesheet"><link href="./main.bundle.css" rel="stylesheet"></head>
+    <body>
+
+        <div id="btn-container" style="position:absolute;width:100vw;left:0;right:0;bottom:0;z-index:99;display:flex;justify-content:center;"></div>
+
+
+        <div id="mycanvas"></div>
+
+        
+        <div id="menu-container">
+            <div id="switch-btn" class="switch-btn">
+                <img class="hide-img" src="./Media/circle.png">
+                <img class="show-img" src="./Media/close.png">
+            </div>
+
+            <div class="sm-title inner"> 
+                Menu Control                 
+            </div>
+            <div class="inner"> 
+                <div id="load-raw" class="my-load-btn"> Import Volume </div>
+                <div id="export-model" class="my-load-btn"> Export Model </div>
+            </div>
+
+            <div class="inner"> 
+                <label for="isovale-control"> IsoValue (<span id="current-isovalue">50</span>): </label>
+                <input style="min-width: 55%;" type="range" id="isovale-control" value="50" max="255" min="0">
+            </div>
+
+            <div class="inner"> 
+                <label for="rotatex-control"> RotateX(<span id="current-rotatex">0</span>): </label>
+                <input style="min-width: 55%;" type="range" id="rotatex-control" value="0" max="180" min="-180" step="10">
+            </div>
+
+            <div class="inner"> 
+                <label for="movey-control"> MoveY(<span id="current-movey">0</span>): </label>
+                <input style="min-width: 55%;" type="range" id="movey-control" value="0" max="100" min="-100" step="0.5">
+            </div>
+
+            <div class="inner"> 
+                <label for="texture"> Material: </label>
+                <select style="min-width: 65%;border-radius:10px" id="texture">
+                    <option value="Lambert"> Lambert </option>
+                    <option value="Phong" selected="selected"> Phong </option>
+                    <option value="Normal"> Normal </option>
+                    <option value="Physical"> Physical </option>
+                    <option value="Toon"> Toon </option>
+                    <option value="Distance"> Distance </option>
+                    <option value="Basic"> Basic </option>
+                </select>
+            </div>
+
+            <div class="inner"> 
+                <label for="poly-line"> Poly-Line: </label>
+                <input type="checkbox" id="poly-line">
+            </div>
+
+            <div class="inner"> 
+                <label for="vertex-color"> Vertex-Color: </label>
+                <input type="checkbox" id="vertex-color" checked="checked">
+            </div>
+
+            <div class="inner"> 
+                <span> Status: </span>
+                <span id="status-text"> Ready </span>
+            </div>
+
+            <div class="inner"> 
+                <label for="model"> Model: </label>
+                <select style="min-width: 65%;border-radius:10px" id="model">
+                    <option value="---" selected="selected"> --- </option>
+                </select>
+            </div>
+
+        </div>
+        
+    <script defer="defer" src="./vendor.bundle.js"></script><script defer="defer" src="./main.bundle.js"></script></body>
+        
+    
+
+</html>
